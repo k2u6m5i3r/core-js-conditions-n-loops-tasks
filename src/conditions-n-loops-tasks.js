@@ -231,9 +231,18 @@ function isPalindrome(str) {
  *  'qwerty', 'Q'     => -1
  *  'qwerty', 'p'     => -1
  */
-function getIndexOf(/* str, letter */) {
-  throw new Error('Not implemented');
+function getIndexOf(str, letter) {
+  let ans = -1;
+  for (let index = 0; index < str.length; index += 1) {
+    const element = str[index];
+    if (element === letter) {
+      ans = index;
+      break;
+    }
+  }
+  return ans;
 }
+
 
 /**
  * Checks if a number contains a specific digit.
