@@ -243,7 +243,6 @@ function getIndexOf(str, letter) {
   return ans;
 }
 
-
 /**
  * Checks if a number contains a specific digit.
  * In this task, the use of methods of the String and Array classes is not allowed.
@@ -259,8 +258,17 @@ function getIndexOf(str, letter) {
  *  12345, 0    => false
  *  12345, 6    => false
  */
-function isContainNumber(/* num, digit */) {
-  throw new Error('Not implemented');
+function isContainNumber(num, digit) {
+  let ans = false;
+  let temp = num;
+  do {
+    if (temp % 10 === digit) {
+      ans = true;
+      break;
+    }
+    temp = Math.floor(temp / 10);
+  } while (temp > 0);
+  return ans;
 }
 
 /**
